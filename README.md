@@ -1,4 +1,4 @@
-# notes
+# Challenge: Application Structure - 2
 
 A new Flutter project.
 
