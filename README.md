@@ -1,6 +1,8 @@
 # Challenge: Application Structure - 2
 
-A new Flutter project.
+In this challenge, you will componentization the application's widgets to improve the project's maintainability.
+
+-  [Link of challenge](https://www.notion.so/Desafio-01-Estrutura-da-aplica-o-42288e0b1afb4fc782ba09a0fcee56c7)
 
 ## Getting Started
 
