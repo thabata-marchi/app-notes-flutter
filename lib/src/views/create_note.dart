@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:notes/src/components/button_delete.dart';
+import 'package:notes/src/components/button.dart';
+import 'package:notes/src/components/input.dart';
 
 class CreateNotePage extends StatefulWidget {
   @override
@@ -31,12 +34,9 @@ class _CreateNotePageState extends State<CreateNotePage> {
         centerTitle: true,
         actions: [
           if (isEdit)
-            IconButton(
-              icon: Icon(Icons.delete),
-              onPressed: () {
-                Navigator.pop(context, "");
-              },
-            )
+            ButtonDelete(onTap: () {
+              Navigator.pop(context, "");
+            })
         ],
       ),
       body: Padding(
@@ -44,14 +44,13 @@ class _CreateNotePageState extends State<CreateNotePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(
-              controller: textController,
-              maxLines: null,
-              onChanged: (value) {
+            InputDefault(
+              controllerInput: textController,
+              onTapChanged: (value) {
                 description = value;
                 setState(() {});
               },
-              decoration: InputDecoration(labelText: "Description"),
+              textLabel: "Description",
             ),
             SizedBox(
               height: 32,
@@ -60,14 +59,11 @@ class _CreateNotePageState extends State<CreateNotePage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    width: 250,
-                    child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pop(context, description);
-                        },
-                        child: Text("Save")),
-                  )
+                  ButtonDefault(
+                      onTap: () {
+                        Navigator.pop(context, description);
+                      },
+                      textButton: "Save")
                 ],
               )
           ],

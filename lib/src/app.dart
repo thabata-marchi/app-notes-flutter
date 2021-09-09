@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:notes/src/views/blocs/create_note.dart';
-import 'package:notes/src/views/blocs/home.dart';
+import 'package:notes/src/views/create_note.dart';
+import 'package:notes/src/views/home.dart';
 
 class AppWidget extends StatelessWidget {
   @override
